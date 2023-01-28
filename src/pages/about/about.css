@@ -1,0 +1,15 @@
+.aboutContainer {
+  min-height: 80vh;
+  margin-top: 50px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.profileImg {
+  border-radius: 50%;
+  width: 150px;
+}

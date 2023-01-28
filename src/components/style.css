@@ -1,0 +1,17 @@
+.navContainer {
+  width: 100%;
+}
+
+.navLink {
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.blogLink {
+  text-decoration: none;
+  color: black;
+}
+.blogLink:hover {
+  text-decoration: none;
+  color: black;
+}

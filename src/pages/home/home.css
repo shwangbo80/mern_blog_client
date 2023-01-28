@@ -1,0 +1,15 @@
+.headerContainer {
+  padding: 0px;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.header {
+  height: 200px;
+  background-color: darkslateblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
