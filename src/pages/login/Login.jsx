@@ -23,6 +23,7 @@ function Login() {
     localStorage.setItem("user", JSON.stringify(response.data));
     dispatch(loginSuccess({user: response.data}));
     // const userData = localStorage.getItem("user");
+    console.log(localStorage.getItem("user")[0]);
     navigate("/");
   };
 

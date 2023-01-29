@@ -41,6 +41,7 @@ function CreateBlog() {
 
   const postBlog = async (e) => {
     e.preventDefault();
+    console.log(user);
     try {
       await axios.post(`${apiUrl}/api/post/`, {
         userId: user._id,
