@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {useEffect} from "react";
 
 const initialState = {
   user: JSON.parse(localStorage.getItem("user")) || null,

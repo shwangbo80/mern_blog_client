@@ -10,7 +10,7 @@ import axios from "axios";
 
 function CreateBlog() {
   const [value, setValue] = useState();
-  const user = useSelector((state) => state.auth.user);
+  const user = useSelector((state) => state.auth.user.user);
   const apiUrl = useSelector((state) => state.auth.apiUrl);
 
   const category = useRef();
