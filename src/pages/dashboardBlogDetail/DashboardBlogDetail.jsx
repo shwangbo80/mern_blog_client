@@ -45,6 +45,20 @@ function BlogDetail() {
     setCommentDetailData(result.data);
   };
 
+  const deleteComment = async (commentId) => {
+    const deleteCommentConfirm = window.confirm(
+      "Are you sure you want to delete the comment?"
+    );
+    if (deleteCommentConfirm) {
+      const result = await axios.delete(
+        `${apiUrl}/api/post/${id}/comments/${commentId}`
+      );
+      fetchCommentData();
+      console.log(result);
+    }
+    return;
+  };
+
   console.log(blogDetailData);
 
   const renderBlogData = () => {
@@ -53,9 +67,19 @@ function BlogDetail() {
     } else {
       return (
         <>
-          <div className="d-flex">
-            <Moment format="MM/DD/YYYY">{blogDetailData.createdAt}</Moment>
-            <p className="ms-3">Category: {blogDetailData.category}</p>
+          <div className="d-flex mt-5" key={blogDetailData._id}>
+            <p className="me-2 fw-bold">Created at</p>
+            <Moment format="MM/DD/YYYY" className="fw-bold">
+              {blogDetailData.createdAt}
+            </Moment>
+            <p className="ms-4 me-2 fw-bold">Updated at</p>
+            <Moment format="MM/DD/YYYY" className="fw-bold">
+              {blogDetailData.updatedAt}
+            </Moment>
+          </div>
+          <div className="d-flex" key={blogDetailData._id}>
+            <p>Category: {blogDetailData.category}</p>
+            <p className="ms-4">Author: {blogDetailData.username}</p>
           </div>
           <hr></hr>
           <h1>{blogDetailData.title}</h1>
@@ -109,6 +133,7 @@ function BlogDetail() {
               <div key={item._id}>
                 <p className="fw-bold">{item.name}</p>
                 <p>"{item.comment}"</p>
+                <Button onClick={() => deleteComment(item._id)}>Delete</Button>
                 <hr></hr>
               </div>
             );

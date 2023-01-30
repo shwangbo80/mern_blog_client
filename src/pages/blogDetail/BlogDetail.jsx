@@ -94,8 +94,17 @@ function BlogDetail() {
       return (
         <>
           <div className="d-flex" key={blogDetailData._id}>
-            <Moment format="MM/DD/YYYY">{blogDetailData.createdAt}</Moment>
-            <p className="ms-4">Category: {blogDetailData.category}</p>
+            <p className="me-2 fw-bold">Created at</p>
+            <Moment format="MM/DD/YYYY" className="fw-bold">
+              {blogDetailData.createdAt}
+            </Moment>
+            <p className="ms-4 me-2 fw-bold">Updated at</p>
+            <Moment format="MM/DD/YYYY" className="fw-bold">
+              {blogDetailData.updatedAt}
+            </Moment>
+          </div>
+          <div className="d-flex" key={blogDetailData._id}>
+            <p>Category: {blogDetailData.category}</p>
             <p className="ms-4">Author: {blogDetailData.username}</p>
           </div>
           <hr></hr>
