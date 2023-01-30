@@ -32,7 +32,7 @@ function BlogComponent() {
         </div>
       );
     } else {
-      return blogdata.reverse().map((item) => {
+      return blogdata.map((item) => {
         return (
           <Container key={item._id}>
             <div className="d-flex">
