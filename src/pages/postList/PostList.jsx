@@ -47,7 +47,7 @@ function PostList() {
         </div>
       );
     } else {
-      return blogdata.reverse().map((item) => {
+      return blogdata.map((item) => {
         return (
           <Container key={item._id} className="mb-3">
             <div className="mb-2">
