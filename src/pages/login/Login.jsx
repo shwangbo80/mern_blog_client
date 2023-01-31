@@ -20,10 +20,10 @@ function Login() {
       email: email.current.value,
       password: password.current.value,
     });
-    localStorage.setItem("user", JSON.stringify(response.data));
+    window.localStorage.setItem("user", JSON.stringify(response.data));
     dispatch(loginSuccess({user: response.data}));
     // const userData = localStorage.getItem("user");
-    console.log(localStorage.getItem("user")[0]);
+    console.log(window.localStorage.getItem("user")[0]);
     navigate("/");
   };
 
