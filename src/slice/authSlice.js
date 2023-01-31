@@ -1,7 +1,10 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || null,
+  //   user: JSON.parse(localStorage.getItem("user")) || null,
+  user: localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : null,
   loaded: false,
   error: false,
   apiUrl: process.env.REACT_APP_API_URL,
