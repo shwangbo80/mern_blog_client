@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {useEffect} from "react";
 
 const initialState = {
   user: JSON.parse(window.localStorage.getItem("user")) || null,
@@ -16,7 +17,7 @@ export const authSlice = createSlice({
       state.error = false;
     },
     loginSuccess: (state, action) => {
-      state.user = action.payload;
+      state.user = action.payload.user;
       state.loaded = true;
       state.error = false;
     },

@@ -22,8 +22,9 @@ function Login() {
     });
     window.localStorage.setItem("user", JSON.stringify(response.data));
     dispatch(loginSuccess({user: response.data}));
+    console.log(response.data);
     // const userData = localStorage.getItem("user");
-    console.log(window.localStorage.getItem("user")[0]);
+    // console.log(window.localStorage.getItem("user"));
     navigate("/");
   };
 
