@@ -12,7 +12,7 @@ function EditBlog() {
   const {id} = useParams();
   console.log("edit blog");
   const loggedIn = useSelector((state) => state.auth.user);
-  const user = useSelector((state) => state.auth.user.user);
+  const user = useSelector((state) => state.auth.user);
   const apiUrl = useSelector((state) => state.auth.apiUrl);
   const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
