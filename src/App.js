@@ -1,5 +1,5 @@
 // import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import {Routes, Route, Link, BrowserRouter} from "react-router-dom";
+import {Routes, Route, Link, BrowserRouter, HashRouter} from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./pages/login/Login";
